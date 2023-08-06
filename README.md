@@ -5,7 +5,7 @@ To develop a Django application to store and retrieve data from a database using
 
 ## Entity Relationship Diagram
 
-![Entity Relationship Diagram](er.png)
+![Entity Relationship Diagram](./er.png)
 
 
 ## DESIGN STEPS
@@ -17,10 +17,10 @@ Clone the problem from github
 Create a new app
 
 ### STEP 3:
-Enter the code for admin.py and modles.py
+Enter the code for admin.py and model.py
 
 ### STEP 4:
-Excute Django admin and create 10 employees
+Excute Django admin and create 10 students
 
 ## PROGRAM :
 
@@ -30,28 +30,27 @@ Models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee ID")
+class Student (models.Model):
+    sid=models.CharField(max_length=20,help_text="Employee ID")
     name=models.CharField(max_length=100)
-    salary=models.IntegerField()
     age=models.IntegerField()
     email=models.EmailField()
 
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
+class StudentAdmin(admin.ModelAdmin):
+    list_display=('sid','name','age','email')
 
 Admin.py
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import Student,StudentAdmin
+admin.site.register(Student,StudentAdmin)
 
 ```
 
 
 ## OUTPUT
 
-![OUTPUT](OUT.png)
+![OUTPUT](./Out.png)
 
 ## RESULT
 

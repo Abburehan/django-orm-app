@@ -54,4 +54,4 @@ admin.site.register(Student,StudentAdmin)
 
 ## RESULT
 
-Program excuted successfully.
+Program excuted successfully
